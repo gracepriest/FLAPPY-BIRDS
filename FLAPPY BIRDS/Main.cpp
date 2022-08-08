@@ -10,8 +10,7 @@ using namespace std;
 Bird* bird;
 int main(void)
 {
-    HandleConsole console;
-    console.HideConsole();
+    
     // Initialization
    //--------------------------------------------------------------------------------------
     const int screenWidth = 1100;
@@ -19,6 +18,8 @@ int main(void)
     
 
     InitWindow(screenWidth, screenHeight, "Melty Bird");
+    HandleConsole console;
+    console.HideConsole();
     
     //can load image in the cpp source file
 
