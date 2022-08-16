@@ -4,8 +4,28 @@
 #include <algorithm>
 #include <math.h>
 #include <string>
+#include <stack>
+#include <vector>
+#include "TitleScene.h"
+#include "StateMachine.h"
 
 
 
-const int SCREENWIDTH = 1100;
-const int SCREENHEIGHT = 750;
+ static const int SCREENWIDTH = 1100;
+ static const int SCREENHEIGHT = 750;
+
+enum class GAMESTATE : int
+{
+	START,
+	LOAD,
+	PLAY,
+	PAUSE,
+	OVER,
+	NEWGAME,
+	COUNTSCREEN
+
+
+};
+
+
+

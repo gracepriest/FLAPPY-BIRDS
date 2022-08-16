@@ -1,18 +1,20 @@
 #pragma once
 #include "Common.h"
-class Game
+#include "StackFSM.h"
+
+class Game   : public StackFSM<GAMESTATE>
 {
 public:
 	
 
 
 
-	void UpdateState();
+  virtual void updateState();
 
 	Game();
 
 	//need a draw/render function
-	void Draw();
+	void Draw(float);
 
 	//load or init function 
 	//return number greater than 0 if load fails
@@ -32,6 +34,13 @@ public:
 
 	void Start();
 
+	void NewMenu();
+
+	void GameOverMenu();
+	
+	void Reset();
+
+	void CountScreen(float);
 
 
 
