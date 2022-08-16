@@ -85,7 +85,7 @@ int Game::load()
 	
 	
 
-	//PlayMusicStream(gameMusic);
+	PlayMusicStream(gameMusic);
 	
 	SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
 	mybird.Init();
@@ -130,7 +130,7 @@ void Game::Update()
 	while (IsRunning)    // Detect window close button or ESC key windowshouldclose will be replaced by iskeypress
 	{
 		
-		//UpdateMusicStream(gameMusic);
+		UpdateMusicStream(gameMusic);
 		if (WindowShouldClose())
 		{
 			pushState(GAMESTATE::OVER);
@@ -208,7 +208,6 @@ void Game::Update()
         }
 		
 		
-
 		mybird.Update(DeltaTime);
 		/*
 		auto it = std::find_if(pipes.begin(), pipes.end(), [](auto& pipe) { return pipe.x < -pipe.width; });
